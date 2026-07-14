@@ -1,0 +1,16 @@
+name: Test Schedule
+
+on:
+    schedule:
+        - cron: "* * * * *"
+    workflow_dispatch:
+
+jobs:
+    test-log:
+        name: Console log test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Run index.js
+              run: node index.js
