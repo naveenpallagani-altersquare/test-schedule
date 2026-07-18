@@ -4,5 +4,5 @@ for (let i = 0; i < 5; i++) {
   console.log(i);
 }
 
-const apiKey = "sk-live-abc123def456";
-eval("console.log('test')");
+const userInput = process.argv[2];
+eval(userInput);
