@@ -14,3 +14,9 @@ jobs:
           config: >-
             p/security-audit
             p/javascript
+
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/dependency-review-action@v4
