@@ -1,0 +1,14 @@
+name: PR Security Scan
+
+on:
+  pull_request:
+    branches: [release/main, staging]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: semgrep/semgrep-action@v1
+        with:
+          config: p/security-audit
