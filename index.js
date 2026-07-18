@@ -5,5 +5,9 @@ for (let i = 0; i < 5; i++) {
 }
 
 const child_process = require("child_process");
-const userInput = process.argv[2];
-child_process.exec("ls " + userInput);
+
+function runCommand(userInput) {
+  child_process.exec("ls " + userInput);
+}
+
+runCommand(process.argv[2]);
